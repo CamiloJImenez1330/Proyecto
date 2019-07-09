@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="wfMasterPage.master.cs" Inherits="Veterinaria.UI.wfMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+	<head runat="server">
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+	</head>
+	<body class="is-preload" >
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main" style="background: url(images/Perros.jpg); background-repeat: no-repeat;  background-size: cover;">
+						<div class="inner">
+							<!-- Banner -->
+								<section id="banner">
+                                    <h1 style="color:lightcoral">Pets Land</h1>
+                                    <form id="form1" runat="server">
+                                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                        <div>
+                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                                <ContentTemplate>
+                                                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                           
+                                        </div>
+                                    </form>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="paginaPrincipal.aspx">Pagina Principal</a></li>
+										<li><a href="generic.html">Dueños</a></li>
+										<li><a href="elements.html">Mascotas</a></li>
+                                        <li><a href="elements.html">Visitas</a></li>
+                                        <li><a href="elements.html">Expedientes</a></li>
+                                        <li><a href="elements.html">Razas</a></li>
+                                        <li><a href="elements.html">Productos</a></li>
+
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
