@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VeteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Dueno">
+    <Key>
+      <PropertyRef Name="idDueno" />
+    </Key>
+    <Property Name="idDueno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Mascota" Relationship="Self.FK_Mascota_Dueno" FromRole="Dueno" ToRole="Mascota" />
+  </EntityType>
+  <EntityType Name="Expediente">
+    <Key>
+      <PropertyRef Name="idExpendiente" />
+    </Key>
+    <Property Name="idExpendiente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMascota" Type="Int32" Nullable="false" />
+    <Property Name="idVisita" Type="Int32" Nullable="false" />
+    <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Mascota" Relationship="Self.FK_Expediente_Mascota" FromRole="Expediente" ToRole="Mascota" />
+    <NavigationProperty Name="Visita" Relationship="Self.FK_Expediente_Visita" FromRole="Expediente" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="Mascota">
+    <Key>
+      <PropertyRef Name="idMascota" />
+    </Key>
+    <Property Name="idMascota" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="edad" Type="Double" Nullable="false" />
+    <Property Name="peso" Type="Double" Nullable="false" />
+    <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idDueno" Type="Int32" Nullable="false" />
+    <Property Name="idRaza" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Dueno" Relationship="Self.FK_Mascota_Dueno" FromRole="Mascota" ToRole="Dueno" />
+    <NavigationProperty Name="Expediente" Relationship="Self.FK_Expediente_Mascota" FromRole="Mascota" ToRole="Expediente" />
+    <NavigationProperty Name="Raza" Relationship="Self.FK_Mascota_Raza" FromRole="Mascota" ToRole="Raza" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="detalle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Productos_Visita" Relationship="Self.FK_Productos_Visita_Producto" FromRole="Producto" ToRole="Productos_Visita" />
+  </EntityType>
+  <EntityType Name="Productos_Visita">
+    <Key>
+      <PropertyRef Name="idVisita" />
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idVisita" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="detalle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK_Productos_Visita_Producto" FromRole="Productos_Visita" ToRole="Producto" />
+    <NavigationProperty Name="Visita" Relationship="Self.FK_Productos_Visita_Visita" FromRole="Productos_Visita" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="Raza">
+    <Key>
+      <PropertyRef Name="idRaza" />
+    </Key>
+    <Property Name="idRaza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Mascota" Relationship="Self.FK_Mascota_Raza" FromRole="Raza" ToRole="Mascota" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Visita">
+    <Key>
+      <PropertyRef Name="idVisita" />
+    </Key>
+    <Property Name="idVisita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechaVisita" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Expediente" Relationship="Self.FK_Expediente_Visita" FromRole="Visita" ToRole="Expediente" />
+    <NavigationProperty Name="Productos_Visita" Relationship="Self.FK_Productos_Visita_Visita" FromRole="Visita" ToRole="Productos_Visita" />
+  </EntityType>
+  <Association Name="FK_Mascota_Dueno">
+    <End Role="Dueno" Type="Self.Dueno" Multiplicity="1" />
+    <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dueno">
+        <PropertyRef Name="idDueno" />
+      </Principal>
+      <Dependent Role="Mascota">
+        <PropertyRef Name="idDueno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediente_Mascota">
+    <End Role="Mascota" Type="Self.Mascota" Multiplicity="1" />
+    <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mascota">
+        <PropertyRef Name="idMascota" />
+      </Principal>
+      <Dependent Role="Expediente">
+        <PropertyRef Name="idMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediente_Visita">
+    <End Role="Visita" Type="Self.Visita" Multiplicity="1" />
+    <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visita">
+        <PropertyRef Name="idVisita" />
+      </Principal>
+      <Dependent Role="Expediente">
+        <PropertyRef Name="idVisita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mascota_Raza">
+    <End Role="Raza" Type="Self.Raza" Multiplicity="1" />
+    <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Raza">
+        <PropertyRef Name="idRaza" />
+      </Principal>
+      <Dependent Role="Mascota">
+        <PropertyRef Name="idRaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Visita_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Productos_Visita" Type="Self.Productos_Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="Productos_Visita">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Visita_Visita">
+    <End Role="Visita" Type="Self.Visita" Multiplicity="1" />
+    <End Role="Productos_Visita" Type="Self.Productos_Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visita">
+        <PropertyRef Name="idVisita" />
+      </Principal>
+      <Dependent Role="Productos_Visita">
+        <PropertyRef Name="idVisita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VeteEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Dueno" EntityType="Self.Dueno" />
+    <EntitySet Name="Expediente" EntityType="Self.Expediente" />
+    <EntitySet Name="Mascota" EntityType="Self.Mascota" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <EntitySet Name="Productos_Visita" EntityType="Self.Productos_Visita" />
+    <EntitySet Name="Raza" EntityType="Self.Raza" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Visita" EntityType="Self.Visita" />
+    <AssociationSet Name="FK_Mascota_Dueno" Association="Self.FK_Mascota_Dueno">
+      <End Role="Dueno" EntitySet="Dueno" />
+      <End Role="Mascota" EntitySet="Mascota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediente_Mascota" Association="Self.FK_Expediente_Mascota">
+      <End Role="Mascota" EntitySet="Mascota" />
+      <End Role="Expediente" EntitySet="Expediente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediente_Visita" Association="Self.FK_Expediente_Visita">
+      <End Role="Visita" EntitySet="Visita" />
+      <End Role="Expediente" EntitySet="Expediente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mascota_Raza" Association="Self.FK_Mascota_Raza">
+      <End Role="Raza" EntitySet="Raza" />
+      <End Role="Mascota" EntitySet="Mascota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Visita_Producto" Association="Self.FK_Productos_Visita_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Productos_Visita" EntitySet="Productos_Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Visita_Visita" Association="Self.FK_Productos_Visita_Visita">
+      <End Role="Visita" EntitySet="Visita" />
+      <End Role="Productos_Visita" EntitySet="Productos_Visita" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

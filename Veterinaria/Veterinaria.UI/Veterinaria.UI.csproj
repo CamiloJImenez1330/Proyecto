@@ -50,6 +50,13 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,6 +66,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -75,8 +85,11 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="paginaPrincipal.aspx" />
-    <Content Include="Raza.aspx" />
+    <Content Include="wfDueno.aspx" />
+    <Content Include="wfProducto.aspx" />
+    <Content Include="wfRaza.aspx" />
     <Content Include="Web.config" />
+    <Content Include="wfVisita.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -90,12 +103,26 @@
       <DependentUpon>paginaPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Raza.aspx.cs">
-      <DependentUpon>Raza.aspx</DependentUpon>
+    <Compile Include="wfDueno.aspx.cs">
+      <DependentUpon>wfDueno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Raza.aspx.designer.cs">
-      <DependentUpon>Raza.aspx</DependentUpon>
+    <Compile Include="wfDueno.aspx.designer.cs">
+      <DependentUpon>wfDueno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfProducto.aspx.cs">
+      <DependentUpon>wfProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfProducto.aspx.designer.cs">
+      <DependentUpon>wfProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfRaza.aspx.cs">
+      <DependentUpon>wfRaza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfRaza.aspx.designer.cs">
+      <DependentUpon>wfRaza.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfMasterPage.Master.cs">
       <DependentUpon>wfMasterPage.Master</DependentUpon>
@@ -103,6 +130,13 @@
     </Compile>
     <Compile Include="wfMasterPage.Master.designer.cs">
       <DependentUpon>wfMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="wfVisita.aspx.cs">
+      <DependentUpon>wfVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfVisita.aspx.designer.cs">
+      <DependentUpon>wfVisita.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +159,7 @@
       <Name>Veterinaria.BL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Veterinaria.DAL\Veterinaria.DAL.csproj">
-      <Project>{450778ae-eb9d-4d39-97c5-ecc6e0e170fa}</Project>
+      <Project>{450778AE-EB9D-4D39-97C5-ECC6E0E170FA}</Project>
       <Name>Veterinaria.DAL</Name>
     </ProjectReference>
   </ItemGroup>

@@ -35,7 +35,7 @@ namespace Veterinaria.DAL
         {
             try
             {
-                VeteEntities entities = new VeteEntities();
+                VeteEntities1 entities = new VeteEntities1();
                 var result = entities.Raza.Find(entity.idRaza);
                 entities.Raza.Remove(result);
                 entities.SaveChanges();
@@ -55,7 +55,7 @@ namespace Veterinaria.DAL
 
             try
             {
-                VeteEntities entities = new VeteEntities();
+                VeteEntities1 entities = new VeteEntities1();
                 lista = entities.Raza.ToList();
                 entities.SaveChanges();
 
@@ -68,11 +68,17 @@ namespace Veterinaria.DAL
             }
         }
 
+        public Raza GetOneById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
         public void Insert(Raza entity)
         {
             try
             {
-                VeteEntities entities = new VeteEntities();
+                VeteEntities1 entities = new VeteEntities1();
                 entities.Raza.Add(entity);
                 entities.SaveChanges();
 
@@ -88,7 +94,7 @@ namespace Veterinaria.DAL
         {
             try
             {
-                using (VeteEntities entities = new VeteEntities())
+                using (VeteEntities1 entities = new VeteEntities1())
                 {
                     entities.Entry(entity).State = System.Data.Entity.EntityState.Modified;
                     entities.SaveChanges();

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VeteModelStoreContainer" CdmEntityContainer="VeteEntities1">
+    <EntitySetMapping Name="Dueno">
+      <EntityTypeMapping TypeName="VeteModel.Dueno">
+        <MappingFragment StoreEntitySet="Dueno">
+          <ScalarProperty Name="idDueno" ColumnName="idDueno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expediente">
+      <EntityTypeMapping TypeName="VeteModel.Expediente">
+        <MappingFragment StoreEntitySet="Expediente">
+          <ScalarProperty Name="idExpendiente" ColumnName="idExpendiente" />
+          <ScalarProperty Name="idMascota" ColumnName="idMascota" />
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mascota">
+      <EntityTypeMapping TypeName="VeteModel.Mascota">
+        <MappingFragment StoreEntitySet="Mascota">
+          <ScalarProperty Name="idMascota" ColumnName="idMascota" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="idDueno" ColumnName="idDueno" />
+          <ScalarProperty Name="idRaza" ColumnName="idRaza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="VeteModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos_Visita">
+      <EntityTypeMapping TypeName="VeteModel.Productos_Visita">
+        <MappingFragment StoreEntitySet="Productos_Visita">
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Raza">
+      <EntityTypeMapping TypeName="VeteModel.Raza">
+        <MappingFragment StoreEntitySet="Raza">
+          <ScalarProperty Name="idRaza" ColumnName="idRaza" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="VeteModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visita">
+      <EntityTypeMapping TypeName="VeteModel.Visita">
+        <MappingFragment StoreEntitySet="Visita">
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="fechaVisita" ColumnName="fechaVisita" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="manteDueno.cs" />
+    <Compile Include="manteProducto.cs" />
     <Compile Include="manteRaza.cs" />
+    <Compile Include="manteVisita.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

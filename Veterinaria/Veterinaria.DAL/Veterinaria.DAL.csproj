@@ -51,45 +51,48 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dueno.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Expediente.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="manteDueno.cs" />
+    <Compile Include="manteProducto.cs" />
     <Compile Include="manteRaza.cs" />
+    <Compile Include="manteVisita.cs" />
     <Compile Include="Mascota.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
-    </Compile>
-    <Compile Include="modeloVeterinaria.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>modeloVeterinaria.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="modeloVeterinaria.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
-    </Compile>
-    <Compile Include="modeloVeterinaria.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>modeloVeterinaria.edmx</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Productos_Visita.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raza.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VeteModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeteModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VeteModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VeteModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeteModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Visita.cs">
-      <DependentUpon>modeloVeterinaria.tt</DependentUpon>
+      <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -99,32 +102,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="modeloVeterinaria.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>modeloVeterinaria.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="modeloVeterinaria.edmx.diagram">
-      <DependentUpon>modeloVeterinaria.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="modeloVeterinaria.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>modeloVeterinaria.Context.cs</LastGenOutput>
-      <DependentUpon>modeloVeterinaria.edmx</DependentUpon>
-    </Content>
-    <Content Include="modeloVeterinaria.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>modeloVeterinaria.edmx</DependentUpon>
-      <LastGenOutput>modeloVeterinaria.cs</LastGenOutput>
-    </Content>
+    <EntityDeploy Include="VeteModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VeteModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VeteModel.edmx.diagram">
+      <DependentUpon>VeteModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VeteModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VeteModel.edmx</DependentUpon>
+      <LastGenOutput>VeteModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VeteModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VeteModel.edmx</DependentUpon>
+      <LastGenOutput>VeteModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

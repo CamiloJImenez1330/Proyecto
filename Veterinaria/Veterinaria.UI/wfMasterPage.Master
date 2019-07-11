@@ -49,12 +49,12 @@
 									</header>
 									<ul>
 										<li><a href="paginaPrincipal.aspx">Pagina Principal</a></li>
-										<li><a href="generic.html">Dueños</a></li>
+										<li><a href="wfDueno.aspx">Dueños</a></li>
 										<li><a href="elements.html">Mascotas</a></li>
-                                        <li><a href="elements.html">Visitas</a></li>
+                                        <li><a href="wfVisita.aspx">Visitas</a></li>
                                         <li><a href="elements.html">Expedientes</a></li>
-                                        <li><a href="elements.html">Razas</a></li>
-                                        <li><a href="elements.html">Productos</a></li>
+                                        <li><a href="wfRaza.aspx">Razas</a></li>
+                                        <li><a href="wfProducto.aspx">Productos</a></li>
 
 									</ul>
 								</nav>

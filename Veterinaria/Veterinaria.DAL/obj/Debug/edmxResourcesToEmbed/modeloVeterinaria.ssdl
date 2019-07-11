@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VeteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dueno">
+    <Key>
+      <PropertyRef Name="idDueno" />
+    </Key>
+    <Property Name="idDueno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expediente">
+    <Key>
+      <PropertyRef Name="idExpendiente" />
+    </Key>
+    <Property Name="idExpendiente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMascota" Type="int" Nullable="false" />
+    <Property Name="idVisita" Type="int" Nullable="false" />
+    <Property Name="fechaIngreso" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mascota">
+    <Key>
+      <PropertyRef Name="idMascota" />
+    </Key>
+    <Property Name="idMascota" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="edad" Type="float" Nullable="false" />
+    <Property Name="peso" Type="float" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idDueno" Type="int" Nullable="false" />
+    <Property Name="idRaza" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Productos_Visita">
+    <Key>
+      <PropertyRef Name="idVisita" />
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idVisita" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Raza">
+    <Key>
+      <PropertyRef Name="idRaza" />
+    </Key>
+    <Property Name="idRaza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Visita">
+    <Key>
+      <PropertyRef Name="idVisita" />
+    </Key>
+    <Property Name="idVisita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechaVisita" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Expediente_Mascota">
+    <End Role="Mascota" Type="Self.Mascota" Multiplicity="1" />
+    <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mascota">
+        <PropertyRef Name="idMascota" />
+      </Principal>
+      <Dependent Role="Expediente">
+        <PropertyRef Name="idMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediente_Visita">
+    <End Role="Visita" Type="Self.Visita" Multiplicity="1" />
+    <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visita">
+        <PropertyRef Name="idVisita" />
+      </Principal>
+      <Dependent Role="Expediente">
+        <PropertyRef Name="idVisita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mascota_Dueno">
+    <End Role="Dueno" Type="Self.Dueno" Multiplicity="1" />
+    <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dueno">
+        <PropertyRef Name="idDueno" />
+      </Principal>
+      <Dependent Role="Mascota">
+        <PropertyRef Name="idDueno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mascota_Raza">
+    <End Role="Raza" Type="Self.Raza" Multiplicity="1" />
+    <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Raza">
+        <PropertyRef Name="idRaza" />
+      </Principal>
+      <Dependent Role="Mascota">
+        <PropertyRef Name="idRaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Visita_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Productos_Visita" Type="Self.Productos_Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="Productos_Visita">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Visita_Visita">
+    <End Role="Visita" Type="Self.Visita" Multiplicity="1" />
+    <End Role="Productos_Visita" Type="Self.Productos_Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visita">
+        <PropertyRef Name="idVisita" />
+      </Principal>
+      <Dependent Role="Productos_Visita">
+        <PropertyRef Name="idVisita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VeteModelStoreContainer">
+    <EntitySet Name="Dueno" EntityType="Self.Dueno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expediente" EntityType="Self.Expediente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mascota" EntityType="Self.Mascota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos_Visita" EntityType="Self.Productos_Visita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Raza" EntityType="Self.Raza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visita" EntityType="Self.Visita" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Expediente_Mascota" Association="Self.FK_Expediente_Mascota">
+      <End Role="Mascota" EntitySet="Mascota" />
+      <End Role="Expediente" EntitySet="Expediente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediente_Visita" Association="Self.FK_Expediente_Visita">
+      <End Role="Visita" EntitySet="Visita" />
+      <End Role="Expediente" EntitySet="Expediente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mascota_Dueno" Association="Self.FK_Mascota_Dueno">
+      <End Role="Dueno" EntitySet="Dueno" />
+      <End Role="Mascota" EntitySet="Mascota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mascota_Raza" Association="Self.FK_Mascota_Raza">
+      <End Role="Raza" EntitySet="Raza" />
+      <End Role="Mascota" EntitySet="Mascota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Visita_Producto" Association="Self.FK_Productos_Visita_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Productos_Visita" EntitySet="Productos_Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Visita_Visita" Association="Self.FK_Productos_Visita_Visita">
+      <End Role="Visita" EntitySet="Visita" />
+      <End Role="Productos_Visita" EntitySet="Productos_Visita" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
