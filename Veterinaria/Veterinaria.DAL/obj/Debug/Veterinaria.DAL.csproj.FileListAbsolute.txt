@@ -12,3 +12,17 @@ C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veteri
 C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.csproj.CopyComplete
 C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.dll
 C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.pdb
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\Veterinaria.DAL.dll.config
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\Veterinaria.DAL.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\Veterinaria.DAL.pdb
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\EntityFramework.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\Veterinaria.DO.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\Veterinaria.DO.pdb
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\EntityFramework.xml
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.csprojAssemblyReference.cache
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.csproj.CoreCompileInputs.cache
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.csproj.CopyComplete
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DAL\obj\Debug\Veterinaria.DAL.pdb
