@@ -57,6 +57,7 @@
       <DependentUpon>VeteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="manteDueno.cs" />
+    <Compile Include="manteMascota.cs" />
     <Compile Include="manteProducto.cs" />
     <Compile Include="manteRaza.cs" />
     <Compile Include="manteVisita.cs" />

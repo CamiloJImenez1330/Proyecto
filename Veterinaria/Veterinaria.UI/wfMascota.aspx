@@ -1,28 +1,45 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wfMasterPage.Master" AutoEventWireup="true" CodeBehind="wfProducto.aspx.cs" Inherits="Veterinaria.UI.wfProducto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wfMasterPage.Master" AutoEventWireup="true" CodeBehind="wfMascota.aspx.cs" Inherits="Veterinaria.UI.wfMascota" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <table>
+    <table>
         <tr>
              <td >
-                <asp:Label ID="Label6" runat="server" Text="Id Producto"></asp:Label></td>
+                <asp:Label ID="Label6" runat="server" Text="Id Mascota"></asp:Label></td>
             <td >
                 <asp:TextBox ID="txtId" runat="server"></asp:TextBox></td>
             <td >
                 <asp:Label ID="Label3" runat="server" Text="Nombre"></asp:Label></td>
             <td >
                 <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></td>
+            
             <td >
-                <asp:Label ID="Label1" runat="server" Text="Detalle"></asp:Label></td>
+                <asp:Label ID="Label1" runat="server" Text="Edad"></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtDetalle" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtEdad" runat="server"></asp:TextBox></td>
             <td >
-                <asp:Label ID="Label2" runat="server" Text="Cantidad"></asp:Label></td>
+                <asp:Label ID="Label2" runat="server" Text="Peso"></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtPeso" runat="server"></asp:TextBox></td>
+          
+            
+            
         </tr>
-
-
+        <tr>
+              <td >
+                <asp:Label ID="Label4" runat="server" Text="Color"></asp:Label></td>
+            <td >
+                <asp:TextBox ID="txtColor" runat="server"></asp:TextBox></td>
+            <td >
+                <asp:Label ID="Label5" runat="server" Text="Dueno"></asp:Label></td>
+            <td ><asp:DropDownList ID="ddlDueno" runat="server">
+                </asp:DropDownList></td>
+            <td >
+                <asp:Label ID="Label7" runat="server" Text="Raza"></asp:Label></td>
+            <td ><asp:DropDownList ID="ddlRaza" runat="server">
+                </asp:DropDownList></td>
+        </tr>
+        
         <tr>
             <td style="text-align:right">
                 <asp:Button ID="btnInsertar" runat="server" Text="Insertar" OnClick="btnInsertar_Click" /></td>
