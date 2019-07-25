@@ -22,6 +22,7 @@
                 <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox></td>
         </tr>
 
+
         <tr>
             <td style="text-align:right">
                 <asp:Button ID="btnInsertar" runat="server" Text="Insertar" OnClick="btnInsertar_Click" /></td>

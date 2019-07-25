@@ -16,12 +16,8 @@ C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterina
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterinaria.BL.pdb
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterinaria.DAL.dll
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterinaria.DO.dll
-C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\EntityFramework.dll
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterinaria.DAL.pdb
-C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterinaria.DAL.dll.config
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\Veterinaria.DO.pdb
-C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\bin\Debug\EntityFramework.xml
-C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\obj\Debug\Veterinaria.BL.csprojAssemblyReference.cache
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\obj\Debug\Veterinaria.BL.csproj.CoreCompileInputs.cache
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\obj\Debug\Veterinaria.BL.csproj.CopyComplete
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.BL\obj\Debug\Veterinaria.BL.dll

@@ -187,7 +187,6 @@ C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Veterinaria.DA
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Veterinaria.DO.dll
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Veterinaria.BL.pdb
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Veterinaria.DAL.pdb
-C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Veterinaria.DAL.dll.config
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\EntityFramework.xml
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\EntityFramework.SqlServer.xml
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Newtonsoft.Json.xml
