@@ -199,3 +199,4 @@ C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\obj\Debug\Veterina
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\obj\Debug\Veterinaria.UI.csproj.CopyComplete
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\obj\Debug\Veterinaria.UI.dll
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\obj\Debug\Veterinaria.UI.pdb
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.UI\bin\Veterinaria.DAL.dll.config
