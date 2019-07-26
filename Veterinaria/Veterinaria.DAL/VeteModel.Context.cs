@@ -16,7 +16,7 @@ namespace Veterinaria.DAL
     public partial class VeteEntities1 : DbContext
     {
         public VeteEntities1()
-            : base("name=VeteEntities1")
+            : base("name=VeteEntities2")
         {
         }
     

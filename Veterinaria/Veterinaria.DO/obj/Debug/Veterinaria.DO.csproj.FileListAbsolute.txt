@@ -3,3 +3,8 @@ C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DO\bin\Debug\Veterin
 C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.csproj.CoreCompileInputs.cache
 C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.dll
 C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.pdb
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\bin\Debug\Veterinaria.DO.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\bin\Debug\Veterinaria.DO.pdb
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.csproj.CoreCompileInputs.cache
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.dll
+C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.pdb

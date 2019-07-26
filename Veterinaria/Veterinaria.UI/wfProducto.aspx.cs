@@ -93,6 +93,14 @@ namespace Veterinaria.UI
             Session["gridview"] = BL.manteProducto._Instancia.GetAll();
             gridview.DataSource = Session["gridview"];
             gridview.DataBind();
+
+            //BL.manteDueno._Instancia.GetAll().Count();
+
+            //var list = (from duenos in BL.manteDueno._Instancia.GetAll()
+            //            select duenos.nombre
+            //            );
+
+            //gridview.DataSource = list;
         }
 
         #endregion
