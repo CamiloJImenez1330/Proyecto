@@ -86,6 +86,7 @@
     <Content Include="Global.asax" />
     <Content Include="paginaPrincipal.aspx" />
     <Content Include="wfDueno.aspx" />
+    <Content Include="wfExpediente.aspx" />
     <Content Include="wfMascota.aspx" />
     <Content Include="wfProducto.aspx" />
     <Content Include="wfRaza.aspx" />
@@ -110,6 +111,13 @@
     </Compile>
     <Compile Include="wfDueno.aspx.designer.cs">
       <DependentUpon>wfDueno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfExpediente.aspx.cs">
+      <DependentUpon>wfExpediente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfExpediente.aspx.designer.cs">
+      <DependentUpon>wfExpediente.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfMascota.aspx.cs">
       <DependentUpon>wfMascota.aspx</DependentUpon>

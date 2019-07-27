@@ -117,7 +117,7 @@ namespace Veterinaria.UI
             if (BL.manteDueno._Instancia.GetAll().Count() == 0 || BL.manteRaza._Instancia.GetAll().Count() == 0)
             {
                 string script = @"alert('Debe de existir por lo menos un dueño y una raza');
-                        window.location.href='wfVisita.aspx';";
+                        window.location.href='paginaPrincipal.aspx';";
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }

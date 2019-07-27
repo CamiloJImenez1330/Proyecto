@@ -52,7 +52,7 @@
 										<li><a href="wfDueno.aspx">Dueños</a></li>
 										<li><a href="wfMascota.aspx">Mascotas</a></li>
                                         <li><a href="wfVisita.aspx">Visitas</a></li>
-                                        <li><a href="elements.html">Expedientes</a></li>
+                                        <li><a href="wfExpediente.aspx">Expedientes</a></li>
                                         <li><a href="wfRaza.aspx">Razas</a></li>
                                         <li><a href="wfProducto.aspx">Productos</a></li>
 

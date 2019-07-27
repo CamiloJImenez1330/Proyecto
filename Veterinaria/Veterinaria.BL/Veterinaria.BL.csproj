@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="manteDueno.cs" />
+    <Compile Include="manteExpediente.cs" />
     <Compile Include="manteMascota.cs" />
     <Compile Include="manteProducto.cs" />
     <Compile Include="manteRaza.cs" />

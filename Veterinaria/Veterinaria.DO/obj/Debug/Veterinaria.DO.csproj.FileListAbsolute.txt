@@ -8,3 +8,4 @@ C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\bin\Debug\Veterina
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.csproj.CoreCompileInputs.cache
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.dll
 C:\Users\RoxG\Desktop\Vet\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.pdb
+C:\Users\Yendry PC\Desktop\Proyecto\Veterinaria\Veterinaria.DO\obj\Debug\Veterinaria.DO.csprojAssemblyReference.cache

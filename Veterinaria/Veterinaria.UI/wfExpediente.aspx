@@ -1,27 +1,28 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wfMasterPage.Master" AutoEventWireup="true" CodeBehind="wfProducto.aspx.cs" Inherits="Veterinaria.UI.wfProducto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wfMasterPage.Master" AutoEventWireup="true" CodeBehind="wfExpediente.aspx.cs" Inherits="Veterinaria.UI.wfExpediente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <table>
+     <table>
         <tr>
              <td >
-                <asp:Label ID="Label6" runat="server" Text="Id Producto"></asp:Label></td>
+                <asp:Label ID="Label6" runat="server" Text="Id Expediente"></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtId" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtIdEx" runat="server"></asp:TextBox></td>
             <td >
-                <asp:Label ID="Label3" runat="server" Text="Nombre"></asp:Label></td>
+                <asp:Label ID="Label1" runat="server" Text="Id Mascota"></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtIdMas" runat="server"></asp:TextBox></td>
             <td >
-                <asp:Label ID="Label1" runat="server" Text="Detalle"></asp:Label></td>
+                <asp:Label ID="Label2" runat="server" Text="Id Visita"></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtDetalle" runat="server"></asp:TextBox></td>
-            <td >
-                <asp:Label ID="Label2" runat="server" Text="Cantidad"></asp:Label></td>
-            <td >
-                <asp:TextBox ID="txtCantidad" runat="server" type="number"></asp:TextBox></td>
+                <asp:TextBox ID="txtIdVis" runat="server"></asp:TextBox></td>
         </tr>
-
+        <tr>
+            <td >
+                <asp:Label ID="Label3" runat="server" Text="Fecha de Ingreso"></asp:Label></td>
+            <td >
+                <asp:Calendar ID="ddlFecha" runat="server"></asp:Calendar></td>
+        </tr>
 
         <tr>
             <td style="text-align:right">
@@ -41,4 +42,5 @@
             </td>
         </tr>
     </table>
+
 </asp:Content>

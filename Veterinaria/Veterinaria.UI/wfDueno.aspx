@@ -22,11 +22,14 @@
             <td >
                 <asp:Label ID="Label2" runat="server" Text="Telefono"></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtTelefono" runat="server" type="number" MinumumValue="1" MaximumValue="8" ErrorMessage="Inserte 8 numeros"></asp:TextBox></td>
             <td >
                 <asp:Label ID="Label4" runat="server" Text="Correo"></asp:Label></td>
             <td >
                 <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox></td>
+            <td>
+                
+            
         </tr>
 
         <tr>

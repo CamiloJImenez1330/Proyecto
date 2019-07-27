@@ -18,9 +18,9 @@
             <td >
                 <asp:TextBox ID="txtEdad" runat="server"></asp:TextBox></td>
             <td >
-                <asp:Label ID="Label2" runat="server" Text="Peso"></asp:Label></td>
+                <asp:Label ID="Label2" runat="server" Text="Peso" ></asp:Label></td>
             <td >
-                <asp:TextBox ID="txtPeso" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtPeso" runat="server" type="number"></asp:TextBox></td>
           
             
             
